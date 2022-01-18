@@ -6,7 +6,9 @@ clear all;
 %% Create an Arduino object with the necessary add-ons.
 a = arduino('COM6', 'Uno', 'Libraries', {'Ultrasonic', 'Servo'});
 
-%% Create an ultrasonic sensor object with trigger pin D12 and echo pin D13 (By checking the "L" LED on your Arduino Uno which is connected to D13 of your board, you can observe if the gating of your ultrasonic sensor is successful or not.).
+%% Create an ultrasonic sensor object with trigger pin D12 and echo pin D13 
+%%(By checking the "L" LED on your Arduino Uno which is connected to D13 of 
+%%your board, you can observe if the gating of your ultrasonic sensor is successful or not.).
 %  Create a servo object for the servo connected to pin D3. 
 sensor = ultrasonic(a, 'D12', 'D13');
 servo_motor = servo(a, 'D3');
